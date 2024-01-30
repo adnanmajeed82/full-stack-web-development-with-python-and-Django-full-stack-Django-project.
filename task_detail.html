@@ -1,0 +1,14 @@
+<!-- tasks/templates/tasks/task_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ task.title }}</title>
+</head>
+<body>
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p>Status: {% if task.completed %}Completed{% else %}Pending{% endif %}</p>
+    <a href="{% url 'task_edit' pk=task.pk %}">Edit</a>
+    <a href="{% url 'task_delete' pk=task.pk %}">Delete</a>
+</body>
+</html>

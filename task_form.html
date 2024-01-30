@@ -1,0 +1,15 @@
+<!-- tasks/templates/tasks/task_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ action }} Task</title>
+</head>
+<body>
+    <h2>{{ action }} Task</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{{ action }}</button>
+    </form>
+</body>
+</html>
